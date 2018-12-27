@@ -1,0 +1,48 @@
+.question {
+  display: block;
+  border: 1px solid silver;
+  padding: 1rem 3rem;
+  margin: 3rem 0;
+
+  * {
+    text-align: left;
+  }
+
+  &-body {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+  }
+
+  &-toggle {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid silver;
+  }
+
+  &-list {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+
+  button {
+    width: 90%;
+    border: 1px solid green;
+  }
+
+  hr {
+    margin: 0;
+
+    +div {
+      margin-left: 3rem;
+    }
+  }
+}
+
+  button.toggle-button {
+    width: 50%;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;background-color: #fff;
+  &.selected{background-color: silver;}}

@@ -80,3 +80,39 @@ nav {
   width: 6rem;
   border-radius: 50%;
   margin-right: 3rem; }
+
+.question {
+  display: block;
+  border: 1px solid silver;
+  padding: 1rem 3rem;
+  margin: 3rem 0; }
+  .question * {
+    text-align: left; }
+  .question-body {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex; }
+  .question-toggle {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid silver; }
+  .question-list {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff; }
+  .question button {
+    width: 90%;
+    border: 1px solid green; }
+  .question hr {
+    margin: 0; }
+    .question hr + div {
+      margin-left: 3rem; }
+
+button.toggle-button {
+  width: 50%;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  background-color: #fff; }
+  button.toggle-button.selected {
+    background-color: silver; }
