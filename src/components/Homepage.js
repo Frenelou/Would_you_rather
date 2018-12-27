@@ -16,7 +16,7 @@ class HomePage extends Component {
     const {authedUser, questions} = this.props
 
     const answered = questions.filter((q) => {return q.optionOne.votes.includes(authedUser) || q.optionTwo.votes.includes(authedUser)})
-    const unanswered = questions.filter((q) => {return !q.optionOne.votes.includes(authedUser) || !q.optionTwo.votes.includes(authedUser)})
+    const unanswered = questions.filter((q) => {return !q.optionOne.votes.includes(authedUser) && !q.optionTwo.votes.includes(authedUser)})
 
     return (<div className="question-toggle">
 
