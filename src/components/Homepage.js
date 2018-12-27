@@ -22,9 +22,11 @@ class HomePage extends Component {
 
       <h1>HomePage</h1>
       <section>
-        <button className="toggle-button selected" id="unanswered" onClick={this.toggleQuestions}>Unanswered Questions
+        <button className={"toggle-button " + (this.state.toggle === 'unanswered' && 'selected')}
+ id="unanswered" onClick={this.toggleQuestions}>Unanswered Questions
         </button>
-        <button className="toggle-button" id="answered" onClick={this.toggleQuestions}>Answered Questions
+        <button className={"toggle-button " + (this.state.toggle === 'answered' && 'selected')}
+ id="answered" onClick={this.toggleQuestions}>Answered Questions
         </button>
       </section>
       <section>
