@@ -1,0 +1,20 @@
+nav {
+  position: relative;
+}
+
+#nav {
+  padding: 0;
+  margin: 0;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  width: 100%;
+
+  li {
+    list-style-type: none;
+    list-style-type: none;
+    display: block;
+    padding: 1rem 3rem;
+  }
+}
