@@ -1,17 +1,20 @@
-import React, {Component} from 'react'
+import React, {Component, Fragment} from 'react'
 import {connect} from 'react-redux'
 import User from './User'
 
 class Login extends Component {
   render() {
 
-    return (<ul id="login-box">
-      {
-        this.props.users.map((id) => (<li key={id}>
-          <User id={id}/>
-        </li>))
-      }
-    </ul>);
+    return (<Fragment>
+      <h1>Pick a user</h1>
+      <ul id="login-box">
+        {
+          this.props.users.map((id) => (<li key={id}>
+            <User id={id}/>
+          </li>))
+        }
+      </ul>
+    </Fragment>);
   }
 }
 function mapStateToProps({authedUser, users}) {
