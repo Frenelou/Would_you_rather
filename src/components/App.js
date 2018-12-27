@@ -25,7 +25,7 @@ class App extends Component {
               : <Fragment>
                   <Nav/>
                   <Switch>
-                    <Route path='/' exact="exact" component={Homepage}/>
+                    <Route path='/' exact={true} component={Homepage}/>
                     <Route component={NotFound}/>
                   </Switch>
                 </Fragment>
