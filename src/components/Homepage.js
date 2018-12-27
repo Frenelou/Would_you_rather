@@ -10,25 +10,27 @@ class HomePage extends Component {
     const toggle = e.target.id
 
     this.setState(() => ({toggle}))
+
   }
   render() {
-    const {authedUser, questionsId, questions} = this.props
-    const answered = questionsId.filter(q => {
-      return questions[q].optionOne.votes.includes(authedUser) || questions[q].optionTwo.votes.includes(authedUser)
-    })
-    const unanswered = questionsId.filter(q => {
-      return !questions[q].optionOne.votes.includes(authedUser) || !questions[q].optionTwo.votes.includes(authedUser)
-    })
+    const {authedUser, questions} = this.props
+
+    const answered = questions.filter((q) => {return q.optionOne.votes.includes(authedUser) || q.optionTwo.votes.includes(authedUser)})
+    const unanswered = questions.filter((q) => {return !q.optionOne.votes.includes(authedUser) || !q.optionTwo.votes.includes(authedUser)})
+
     return (<div className="question-toggle">
+
       <h1>HomePage</h1>
       <section>
-        <button className="toggle-button selected" id="unanswered" onClick={this.toggleQuestions}>Unanswered Questions </button>
-        <button className="toggle-button" id="answered" onClick={this.toggleQuestions}>Answered Questions </button>
+        <button className="toggle-button selected" id="unanswered" onClick={this.toggleQuestions}>Unanswered Questions
+        </button>
+        <button className="toggle-button" id="answered" onClick={this.toggleQuestions}>Answered Questions
+        </button>
       </section>
       <section>
         <ul className="question-list">
-          {this.state.toggle === 'answered' && (answered.map((id) => (<Question key={id} id={id}/>)))}
-          {this.state.toggle === 'unanswered' && (unanswered.map((id) => (<Question key={id} id={id}/>)))}
+          {this.state.toggle === 'answered' && (answered.map((q) => (<Question key={q.id} id={q.id}/>)))}
+          {this.state.toggle === 'unanswered' && (unanswered.map((q) => (<Question key={q.id} id={q.id}/>)))}
         </ul>
       </section>
     </div>)
@@ -36,7 +38,11 @@ class HomePage extends Component {
 }
 
 function mapStateToProps({authedUser, questions}) {
-  return {questionsId: Object.keys(questions), questions, authedUser}
+
+  return {
+    questions: Object.keys(questions).map((k) => questions[k]).sort((a, b,) => b.timestamp - a.timestamp),
+    authedUser
+  }
 }
 
 export default connect(mapStateToProps)(HomePage)
