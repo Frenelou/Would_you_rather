@@ -81,6 +81,39 @@ nav {
   border-radius: 50%;
   margin-right: 3rem; }
 
+.leaderboard-list {
+  max-width: 600px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column; }
+
+.leaderboard-box {
+  display: block;
+  border: 1px solid silver;
+  width: 90%;
+  padding: 2rem;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 1rem 0; }
+
+.leaderboard-score {
+  width: 6rem;
+  border: 1px solid silver;
+  border-radius: 0.3rem; }
+  .leaderboard-score-body, .leaderboard-score-header {
+    padding: 1rem; }
+  .leaderboard-score-header {
+    border-bottom: 1px solid silver; }
+
+.leaderboard .avatar {
+  margin: 0; }
+
+.leaderboard hr {
+  margin: 0 2rem; }
+
 .question {
   display: block;
   border: 1px solid silver;

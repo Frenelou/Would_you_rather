@@ -22,8 +22,13 @@ class Nav extends Component {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/new' activeClassName='active'>
+          <NavLink to='/new'>
             New Tweet
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/leaderboard'>
+            Leaderboard
           </NavLink>
         </li>
 

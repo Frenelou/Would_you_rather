@@ -1,0 +1,44 @@
+.leaderboard {
+  &-list {
+    max-width: 600px;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-box {
+    display: block;
+    border: 1px solid silver;
+    width: 90%;
+    padding: 2rem;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    margin: 1rem 0;
+  }
+
+  &-score {
+    width: 6rem;
+    border: 1px solid silver;
+    border-radius: 0.3rem;
+
+    &-body,
+    &-header {
+      padding: 1rem;
+    }
+
+    &-header {
+      border-bottom: 1px solid silver;
+    }
+  }
+
+  .avatar {
+    margin: 0;
+  }
+
+  hr {
+    margin: 0 2rem;
+  }
+}
