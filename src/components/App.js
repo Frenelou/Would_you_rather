@@ -5,6 +5,7 @@ import NotFound from './NotFound'
 import Login from './Login'
 import Nav from './Nav'
 import Leaderboard from './Leaderboard'
+import QuestionDetails from './QuestionDetails'
 import {connect} from 'react-redux'
 import {handleInitialData} from '../actions/shared.js'
 import LoadingBar from 'react-redux-loading'
@@ -28,6 +29,8 @@ class App extends Component {
                   <Switch>
                     <Route path='/' exact={true} component={Homepage}/>
                     <Route path='/leaderboard' exact={true} component={Leaderboard}/>
+                    <Route path='/question/:id' component={QuestionDetails}/>
+                    <Route path='/leaderboard' component={Leaderboard}/>
                     <Route component={NotFound}/>
                   </Switch>
                 </Fragment>

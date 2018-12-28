@@ -14,6 +14,12 @@
     display: flex;
   }
 
+  &-details,
+  &-toggle {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
   &-toggle {
     position: relative;
     max-width: 600px;
@@ -41,8 +47,13 @@
   }
 }
 
-  button.toggle-button {
-    width: 50%;
-    padding: 1rem 3rem;
-    font-size: 1.2rem;background-color: #fff;
-  &.selected{background-color: silver;}}
+button.toggle-button {
+  width: 50%;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  background-color: #fff;
+
+  &.selected {
+    background-color: silver;
+  }
+}

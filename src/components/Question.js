@@ -1,14 +1,15 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {withRouter} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 
 class Question extends Component {
   render() {
     const {question, users} = this.props
-    const {author, optionOne} = question
+    const {author, optionOne, id} = question
     return (<li className="question">
       <h3 className="question-header">
-        {users[author].name} asks
+        {users[author].name}
+        asks
       </h3>
       <div className="question-body">
         <img src={this.props.users[author].avatarURL} alt={`${this.props.users[author].name}'s avatar`} className="avatar"/>
@@ -16,7 +17,9 @@ class Question extends Component {
         <div>
           <h4>Would you rather</h4>
           <p>...{optionOne.text}...</p>
-          <button>View More</button>
+          <Link to={`question/`+id} activeclassname='active'>
+            <button>View More</button>
+          </Link>
         </div>
       </div>
     </li>)

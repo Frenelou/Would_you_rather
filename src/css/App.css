@@ -125,6 +125,9 @@ nav {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex; }
+  .question-details, .question-toggle {
+    margin: 0 auto;
+    max-width: 600px; }
   .question-toggle {
     position: relative;
     max-width: 600px;

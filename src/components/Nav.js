@@ -23,7 +23,7 @@ class Nav extends Component {
         </li>
         <li>
           <NavLink to='/new'>
-            New Tweet
+            New Question
           </NavLink>
         </li>
         <li>

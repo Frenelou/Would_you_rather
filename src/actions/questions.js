@@ -1,8 +1,12 @@
-export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS'
+import {saveQuestionAnswer} from '../utils/api'
 
-export function receiveQuestions (questions) {
-  return {
-    type: RECEIVE_QUESTIONS,
-    questions,
-  }
+export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS'
+export const SAVE_QUESTION_ANSWER = 'SAVE_QUESTION_ANSWER'
+
+export function receiveQuestions(questions) {
+  return {type: RECEIVE_QUESTIONS, questions}
+}
+
+export function saveAnswer(authedUser, qid, answer) {
+  return saveQuestionAnswer({authedUser, qid, answer})
 }
