@@ -1,26 +1,39 @@
 import React, {Component, Fragment} from 'react'
 import {connect} from 'react-redux'
+import {handleSaveQuestion} from '../actions/questions'
+import Stats from './Stats'
 
 class QuestionDetails extends Component {
   state = {
     selectedOption: 'optionOne'
   }
   updateCategory = (e) => {
-    if (e.target.checked) {
-      console.log(e.target.value)
-    }
     const val = e.target.value
     this.setState(() => ({selectedOption: val}))
   }
-  chooseOption = (e) => {
+  handleSubmit = (e) => {
     e.preventDefault()
+    const {selectedOption} = this.state
+    const {authedUser, id} = this.props
 
-    // const {dispatch, question, authedUser} = this.props
+    const {dispatch} = this.props
+
+    dispatch(handleSaveQuestion(authedUser, id, selectedOption))
 
   }
+  calcVotePercentage = (votes, total) => {
+    return {
+      'width': votes * 100 / total + '%'
+    }
+  }
   render() {
-    const {users, question, answered} = this.props
+    const {users, question, answered, authedUser} = this.props
     const {author, optionOne, optionTwo} = question
+    const optionOneVotes = question.optionOne.votes.length
+    const optionTwoVotes = question.optionTwo.votes.length
+    const totalOfVotes = optionOneVotes + optionTwoVotes
+    const answer = question.optionOne.votes.includes(authedUser)
+    console.log('answer: ', answer);
 
     return (<div className="question-details">
       <h1>QuestionDetails</h1>
@@ -36,8 +49,10 @@ class QuestionDetails extends Component {
             {
               answered === true && (<Fragment>
                 <h4>Results</h4>
-                <div>{optionOne.text}
-                  {optionTwo.text}</div>
+                <Stats option={optionOne.text} optionCount={optionOneVotes} totalOfVotes={totalOfVotes} chosen={answer}/>
+                <p>{answer}</p>
+
+                <Stats option={optionTwo.text} optionCount={optionTwoVotes} totalOfVotes={totalOfVotes} chosen={!answer}/>
               </Fragment>)
             }
             {
@@ -51,7 +66,7 @@ class QuestionDetails extends Component {
                   <label>
                     <input type="radio" name="options" value='optionTwo' checked={this.state.selectedOption === "optionTwo"} onChange={this.updateCategory}/> {optionTwo.text}
                   </label>
-                  <button type="sumbit" onClick={this.chooseOption}>Submit</button>
+                  <button type="sumbit" onClick={this.handleSubmit}>Submit</button>
                 </form>
               </Fragment>)
             }
@@ -69,13 +84,13 @@ function mapStateToProps({
 }, props) {
   const {id} = props.match.params
 
-  console.log(id);
+  console.log('authedUser: ', authedUser);
+
   const question = questions[id]
   const answered = question.optionOne.votes.includes(authedUser) || question.optionTwo.votes.includes(authedUser)
     ? true
     : false
-  console.log(answered);
-  return {question: question, users, answered, id}
+  return {question: question, users, answered, id, authedUser}
 }
 
 export default connect(mapStateToProps)(QuestionDetails)

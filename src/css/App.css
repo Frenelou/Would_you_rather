@@ -144,6 +144,25 @@ nav {
     margin: 0; }
     .question hr + div {
       margin-left: 3rem; }
+  .question-option {
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    position: relative; }
+    .question-option.voted {
+      border-color: green; }
+
+.voted-tag {
+  display: block;
+  padding: .5rem;
+  text-align: center;
+  background-color: gold;
+  position: absolute;
+  right: -1.5rem;
+  top: -1.5rem;
+  border-radius: 50%;
+  font-size: .8rem;
+  color: #fff; }
 
 .new-question {
   border: 1px solid silver;
@@ -199,3 +218,15 @@ button.toggle-button {
   background-color: #fff; }
   button.toggle-button.selected {
     background-color: silver; }
+
+.poll-bar {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  background-color: silver;
+  height: 2rem;
+  overflow: hidden; }
+  .poll-bar--fill {
+    height: 100%;
+    width: 100%;
+    background-color: green; }

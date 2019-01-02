@@ -45,8 +45,31 @@
       margin-left: 3rem;
     }
   }
-}
 
+  &-option {
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+position: relative;
+
+
+    &.voted {
+      border-color: green;
+    }
+  }
+}
+.voted-tag{
+  display: block;
+padding: .5rem;
+  text-align: center;
+  background-color: gold;
+  position: absolute;
+  right: -1.5rem;
+  top: -1.5rem;
+  border-radius: 50%;
+  font-size: .8rem;
+  color: #fff;
+}
 .new-question {
   border: 1px solid silver;
   display: block;
@@ -73,7 +96,7 @@
     overflow: hidden;
     text-align: center;
   }
-// Inspied from https://css-tricks.com/box-sizing/
+  // Inspied from https://css-tricks.com/box-sizing/
   label:after,
   label:before {
     position: absolute;
@@ -123,5 +146,20 @@ button.toggle-button {
 
   &.selected {
     background-color: silver;
+  }
+}
+
+.poll-bar {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  background-color: silver;
+  height: 2rem;
+  overflow: hidden;
+
+  &--fill {
+    height: 100%;
+    width: 100%;
+    background-color: green;
   }
 }

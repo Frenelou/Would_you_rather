@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {withRouter, Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import {handleAddQuestion} from '../actions/questions'
 
 class NewQuestion extends Component {
   state = {
     optionOne: '',
     optionTwo: '',
-    toHome:false
+    toHome: false
   }
   handleChange = (e) => {
     if (e.target.name === 'optionOne') {
@@ -25,11 +25,9 @@ class NewQuestion extends Component {
 
     const {dispatch} = this.props
 
-    dispatch(handleAddQuestion(optionOne,
-optionTwo))
+    dispatch(handleAddQuestion(optionOne, optionTwo))
 
-    console.log('New question: ', optionOne, optionTwo);
-    this.setState(() => ({optionOne, optionTwo, toHome:true}))
+    this.setState(() => ({optionOne, optionTwo, toHome: true}))
 
   }
   render() {
