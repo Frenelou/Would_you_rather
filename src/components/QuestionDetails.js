@@ -1,6 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component, Fragment} from 'react'
 import {connect} from 'react-redux'
-// import {saveAnswer} from '../actions/questions'
 
 class QuestionDetails extends Component {
   state = {
@@ -15,14 +14,13 @@ class QuestionDetails extends Component {
   }
   chooseOption = (e) => {
     e.preventDefault()
-    const {dispatch, authedUser, id} = this.props
-    const {answer} = this.state
-    // dispatch(saveAnswer({authedUser, id, answer}))
-  }
 
+    // const {dispatch, question, authedUser} = this.props
+
+  }
   render() {
-    const {answered, users, question} = this.props
-    const {author, optionOne, optionTwo, id} = question
+    const {users, question, answered} = this.props
+    const {author, optionOne, optionTwo} = question
 
     return (<div className="question-details">
       <h1>QuestionDetails</h1>
@@ -35,17 +33,28 @@ class QuestionDetails extends Component {
           <img src={this.props.users[author].avatarURL} alt={`${this.props.users[author].name}'s avatar`} className="avatar"/>
           <hr/>
           <div>
-            <h4>Would you rather</h4>
-            <form>
-              <label>
-                <input type="radio" name="options" value='optionOne' checked={this.state.selectedOption === "optionOne"} onChange={this.updateCategory}/> {optionOne.text}
-              </label>
-              <br/>
-              <label>
-                <input type="radio" name="options" value='optionTwo' checked={this.state.selectedOption === "optionTwo"} onChange={this.updateCategory}/> {optionTwo.text}
-              </label>
-              <button type="sumbit" onClick={this.chooseOption}>Submit</button>
-            </form>
+            {
+              answered === true && (<Fragment>
+                <h4>Results</h4>
+                <div>{optionOne.text}
+                  {optionTwo.text}</div>
+              </Fragment>)
+            }
+            {
+              answered === false && (<Fragment>
+                <h4>Would you rather</h4>
+                <form>
+                  <label>
+                    <input type="radio" name="options" value='optionOne' checked={this.state.selectedOption === "optionOne"} onChange={this.updateCategory}/> {optionOne.text}
+                  </label>
+                  <br/>
+                  <label>
+                    <input type="radio" name="options" value='optionTwo' checked={this.state.selectedOption === "optionTwo"} onChange={this.updateCategory}/> {optionTwo.text}
+                  </label>
+                  <button type="sumbit" onClick={this.chooseOption}>Submit</button>
+                </form>
+              </Fragment>)
+            }
 
           </div>
         </div>

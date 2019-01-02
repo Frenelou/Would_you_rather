@@ -47,6 +47,74 @@
   }
 }
 
+.new-question {
+  border: 1px solid silver;
+  display: block;
+  max-width: 500px;
+  margin: 3rem auto;
+
+  &--header {
+    border-bottom: 1px solid silver;
+  }
+
+  &--body {
+    padding: 1rem 3rem;
+  }
+
+  h2,
+  p {
+    text-align: left;
+  }
+
+  label {
+    position: relative;
+    font-size: 30px;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+  }
+// Inspied from https://css-tricks.com/box-sizing/
+  label:after,
+  label:before {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 50%;
+    height: 1px;
+    content: '\a0';
+    background-color: silver;
+  }
+
+  label:before {
+    margin-left: -55%;
+    text-align: right;
+  }
+
+  label:after {
+    margin-left: 5%;
+    text-align: right;
+  }
+
+  .color {
+    background-color: #ccc;
+  }
+
+  button,
+  input,
+  label {
+    display: block;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: green;
+  }
+}
+
 button.toggle-button {
   width: 50%;
   padding: 1rem 3rem;

@@ -145,6 +145,53 @@ nav {
     .question hr + div {
       margin-left: 3rem; }
 
+.new-question {
+  border: 1px solid silver;
+  display: block;
+  max-width: 500px;
+  margin: 3rem auto; }
+  .new-question--header {
+    border-bottom: 1px solid silver; }
+  .new-question--body {
+    padding: 1rem 3rem; }
+  .new-question h2,
+  .new-question p {
+    text-align: left; }
+  .new-question label {
+    position: relative;
+    font-size: 30px;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center; }
+  .new-question label:after,
+  .new-question label:before {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 50%;
+    height: 1px;
+    content: '\a0';
+    background-color: silver; }
+  .new-question label:before {
+    margin-left: -55%;
+    text-align: right; }
+  .new-question label:after {
+    margin-left: 5%;
+    text-align: right; }
+  .new-question .color {
+    background-color: #ccc; }
+  .new-question button,
+  .new-question input,
+  .new-question label {
+    display: block;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0;
+    box-sizing: border-box; }
+  .new-question button {
+    background-color: green; }
+
 button.toggle-button {
   width: 50%;
   padding: 1rem 3rem;

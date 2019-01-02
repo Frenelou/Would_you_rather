@@ -1,10 +1,9 @@
-import React, {Component, Fragment} from 'react'
+import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import User from './User'
 
 class Leaderboard extends Component {
   render() {
-    const {users, sortedUsers, usersObj} = this.props
+    const {users, sortedUsers} = this.props
 
     return (<div className="leaderboard">
       <h1>Leaderboard</h1>

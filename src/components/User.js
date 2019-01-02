@@ -10,7 +10,7 @@ class User extends Component {
 
   }
   render() {
-    return (<a href="#" onClick={this.setUser}>
+    return (<a href="#user" onClick={this.setUser}>
       <img src={this.props.avatar} alt={`${this.props.name}'s avatar`} className="avatar"/>
       <span className="username">{this.props.name}</span>
     </a>)

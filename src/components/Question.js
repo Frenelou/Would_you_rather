@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {withRouter, Link} from 'react-router-dom'
 
 class Question extends Component {
+
   render() {
     const {question, users} = this.props
     const {author, optionOne, id} = question
@@ -17,7 +18,7 @@ class Question extends Component {
         <div>
           <h4>Would you rather</h4>
           <p>...{optionOne.text}...</p>
-          <Link to={`question/`+id} activeclassname='active'>
+          <Link to={`question/` + id} activeclassname='active'>
             <button>View More</button>
           </Link>
         </div>
