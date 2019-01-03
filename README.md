@@ -1,16 +1,25 @@
 # Would you rather
 
+A Udacity project.
+
+## About this project
+
 This is a little game where the user can answer questions by choosing between two options.
 The user can login in by cchoosing and avatar, then see their unanswered/answered, answer questions, see their rank on the leaderboard.
-This is a Udacity project.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## How to
+
+Install project's required file with `npm install`
+
+Run project locally with `yarn start`
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn/npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
