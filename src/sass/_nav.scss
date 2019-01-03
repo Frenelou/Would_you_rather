@@ -21,14 +21,32 @@ nav {
 
     &.logout {
       padding: 0 3rem;
-      button{
-        margin-top: .5rem;
+
+      button {
+        margin-top: 0.5rem;
       }
     }
   }
 
-  a:not(.active), .logout  {
+  a,
+  button {
+    font-weight: bold;
+  }
+
+  .logout,
+  a:not(.active) {
     cursor: hand;
+  }
+
+  a {
+    &.active {
+      background-color: $color-primary;
+      color: #fff;
+    }
+
+    &:not(.active):hover {
+      color: $color-primary;
+    }
   }
 
   a,
@@ -40,10 +58,5 @@ nav {
     width: auto;
     text-decoration: none;
     font-size: 1.2rem;
-
-    &.active {
-      background-color: $color-primary;
-      color: #fff;
-    }
   }
 }

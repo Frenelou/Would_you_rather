@@ -412,9 +412,18 @@ nav {
     #nav li.logout {
       padding: 0 3rem; }
       #nav li.logout button {
-        margin-top: .5rem; }
-  #nav a:not(.active), #nav .logout {
+        margin-top: 0.5rem; }
+  #nav a,
+  #nav button {
+    font-weight: bold; }
+  #nav .logout,
+  #nav a:not(.active) {
     cursor: hand; }
+  #nav a.active {
+    background-color: #3197e0;
+    color: #fff; }
+  #nav a:not(.active):hover {
+    color: #3197e0; }
   #nav a,
   #nav span {
     padding: 1rem 3rem;
@@ -424,10 +433,6 @@ nav {
     width: auto;
     text-decoration: none;
     font-size: 1.2rem; }
-    #nav a.active,
-    #nav span.active {
-      background-color: #3197e0;
-      color: #fff; }
 
 #login-box {
   max-width: 500px;
