@@ -39,8 +39,14 @@ button {
 
   &[type="submit"],
   &.toggle-button.selected,
-  &.view-more :focus {
+  &.view-more :focus, &.action {
     background-color: $color-primary;
     color: #fff;
+  }
+
+  &[type="submit"],
+  &.toggle-button.selected,
+  &.action {
+    &:hover, &:focus{background-color: darken($color-primary, 10%);}
   }
 }
