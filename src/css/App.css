@@ -573,6 +573,8 @@ nav {
   padding: 0.5rem;
   text-align: center;
   background-color: #f9b940;
+  border: 1px solid #f8b027;
+  box-shadow: 2px 2px 5px #dadada;
   position: absolute;
   right: -1.5rem;
   top: -1.5rem;

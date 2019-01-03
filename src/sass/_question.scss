@@ -87,6 +87,8 @@
   padding: 0.5rem;
   text-align: center;
   background-color: $color-gold;
+  border: 1px solid darken($color-gold, 5%);
+  box-shadow: 2px 2px 5px lighten($color-borders,10%);
   position: absolute;
   right: -1.5rem;
   top: -1.5rem;
