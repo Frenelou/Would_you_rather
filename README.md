@@ -1,16 +1,26 @@
+# Would you rather
+
+This is a little game where the user can answer questions by choosing between two options.
+The user can login in by cchoosing and avatar, then see their unanswered/answered, answer questions, see their rank on the leaderboard.
+This is a Udacity project.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
+
+### `gulp`
+
+Compiles scss to css files and watches for changes to keep updating as you go.
 
 ### `npm test`
 

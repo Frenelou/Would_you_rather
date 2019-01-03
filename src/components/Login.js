@@ -11,8 +11,7 @@ class Login extends Component {
         {
           this.props.users.map((id) => (<li key={id}>
             <User id={id}/>
-          </li>))
-        }
+          </li>))}
       </ul>
     </Fragment>);
   }

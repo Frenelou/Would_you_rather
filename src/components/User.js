@@ -22,7 +22,7 @@ function mapStateToProps({
 }, {id}) {
   const user = users[id]
 
-  return {authedUser, name: user.name, avatar:user.avatarURL}
+  return {authedUser, name: user.name, avatar: user.avatarURL}
 }
 
 export default withRouter(connect(mapStateToProps)(User))

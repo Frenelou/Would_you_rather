@@ -14,17 +14,10 @@ class QuestionDetails extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const {selectedOption} = this.state
-    const {authedUser, id} = this.props
-
-    const {dispatch} = this.props
+    const {authedUser, id, dispatch} = this.props
 
     dispatch(handleSaveQuestion(authedUser, id, selectedOption))
 
-  }
-  calcVotePercentage = (votes, total) => {
-    return {
-      'width': votes * 100 / total + '%'
-    }
   }
   render() {
     const {users, question, answered, authedUser} = this.props
@@ -33,13 +26,13 @@ class QuestionDetails extends Component {
     const optionTwoVotes = question.optionTwo.votes.length
     const totalOfVotes = optionOneVotes + optionTwoVotes
     const answer = question.optionOne.votes.includes(authedUser)
-    console.log('answer: ', answer);
 
     return (<div className="question-details">
       <h1>QuestionDetails</h1>
       <div className="question">
         <h3 className="question-header">
-          {users[author].name} asks
+          {users[author].name}
+          asks
         </h3>
         <div className="question-body">
           <img src={this.props.users[author].avatarURL} alt={`${this.props.users[author].name}'s avatar`} className="avatar"/>

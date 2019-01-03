@@ -12,8 +12,8 @@ class Nav extends Component {
   render() {
     return (<nav>
       <ul id='nav'>
-        <li className="logout">
-          <button onClick={this.setUser}>Log out</button>
+        <li className="logout"><button onClick = {
+  this.setUser}>Log out</button>
         </li>
         <li><span>Hello, {this.props.userName}!</span></li>
         <li>
