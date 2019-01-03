@@ -1,5 +1,6 @@
 nav {
   position: relative;
+  margin-bottom: 3rem;
 }
 
 #nav {
@@ -10,11 +11,39 @@ nav {
   display: inline-flex;
   flex-direction: row-reverse;
   width: 100%;
+  border-bottom: 3px solid $color-primary;
 
   li {
     list-style-type: none;
     list-style-type: none;
     display: block;
+    position: relative;
+
+    &.logout {
+      padding: 0 3rem;
+      button{
+        margin-top: .5rem;
+      }
+    }
+  }
+
+  a:not(.active), .logout  {
+    cursor: hand;
+  }
+
+  a,
+  span {
     padding: 1rem 3rem;
+    color: $color-font;
+    box-sizing: border-box;
+    display: block;
+    width: auto;
+    text-decoration: none;
+    font-size: 1.2rem;
+
+    &.active {
+      background-color: $color-primary;
+      color: #fff;
+    }
   }
 }

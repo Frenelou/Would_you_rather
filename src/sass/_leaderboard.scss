@@ -10,7 +10,7 @@
 
   &-box {
     display: block;
-    border: 1px solid silver;
+    border: 1px solid $color-borders;
     width: 90%;
     padding: 2rem;
     display: -webkit-flex;
@@ -21,8 +21,23 @@
 
   &-score {
     width: 6rem;
-    border: 1px solid silver;
+    border: 1px solid $color-borders;
     border-radius: 0.3rem;
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;flex-direction: column;
+
+    &-body {
+      height: inherit;
+      flex: 1;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px
+    }
 
     &-body,
     &-header {
@@ -30,7 +45,7 @@
     }
 
     &-header {
-      border-bottom: 1px solid silver;
+      border-bottom: 1px solid $color-borders;
     }
   }
 

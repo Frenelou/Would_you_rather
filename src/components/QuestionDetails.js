@@ -39,8 +39,7 @@ class QuestionDetails extends Component {
       <h1>QuestionDetails</h1>
       <div className="question">
         <h3 className="question-header">
-          {users[author].name}
-          asks
+          {users[author].name} asks
         </h3>
         <div className="question-body">
           <img src={this.props.users[author].avatarURL} alt={`${this.props.users[author].name}'s avatar`} className="avatar"/>
@@ -48,7 +47,7 @@ class QuestionDetails extends Component {
           <div>
             {
               answered === true && (<Fragment>
-                <h4>Results</h4>
+                <h3>Results</h3>
                 <Stats option={optionOne.text} optionCount={optionOneVotes} totalOfVotes={totalOfVotes} chosen={answer}/>
                 <p>{answer}</p>
 
@@ -57,16 +56,15 @@ class QuestionDetails extends Component {
             }
             {
               answered === false && (<Fragment>
-                <h4>Would you rather</h4>
+                <h3>Would you rather...</h3>
                 <form>
                   <label>
                     <input type="radio" name="options" value='optionOne' checked={this.state.selectedOption === "optionOne"} onChange={this.updateCategory}/> {optionOne.text}
                   </label>
-                  <br/>
                   <label>
                     <input type="radio" name="options" value='optionTwo' checked={this.state.selectedOption === "optionTwo"} onChange={this.updateCategory}/> {optionTwo.text}
                   </label>
-                  <button type="sumbit" onClick={this.handleSubmit}>Submit</button>
+                  <button type="submit" onClick={this.handleSubmit}>Submit</button>
                 </form>
               </Fragment>)
             }

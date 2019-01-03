@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {NavLink} from 'react-router-dom'
+import {NavLink, withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {unsetAuthedUser} from '../actions/authedUser'
 
@@ -12,22 +12,22 @@ class Nav extends Component {
   render() {
     return (<nav>
       <ul id='nav'>
-        <li>
+        <li className="logout">
           <button onClick={this.setUser}>Log out</button>
         </li>
-        <li>Hello, {this.props.userName}!</li>
+        <li><span>Hello, {this.props.userName}!</span></li>
         <li>
           <NavLink to='/' exact={true} activeClassName='active'>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to='/new'>
+          <NavLink to='/new' activeClassName='active'>
             New Question
           </NavLink>
         </li>
         <li>
-          <NavLink to='/leaderboard'>
+          <NavLink to='/leaderboard' activeClassName='active'>
             Leaderboard
           </NavLink>
         </li>
@@ -44,4 +44,4 @@ function mapStateToProps({authedUser, users}) {
   return {authedUser, userName}
 }
 
-export default connect(mapStateToProps)(Nav)
+export default withRouter(connect(mapStateToProps)(Nav))

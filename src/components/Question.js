@@ -18,8 +18,7 @@ class Question extends Component {
         <div>
           <h4>Would you rather</h4>
           <p>...{optionOne.text}...</p>
-          <Link to={`question/` + id} activeclassname='active'>
-            <button>View More</button>
+          <Link to={`question/` + id} activeclassname='active' className="button view-more">View More
           </Link>
         </div>
       </div>

@@ -37,11 +37,9 @@ class NewQuestion extends Component {
       return <Redirect to='/'/>
     } else {
       return (<div className="new-question ">
-        <div className="new-question--header">
-          <h1>Create new question</h1>
-        </div>
+          <h2 className="new-question--header">Create new question</h2>
         <div className="new-question--body">
-          <p>Complete the question</p>
+          <label>Complete the question</label>
           <h2>Would you rather...</h2>
           <form action="" className="new-question--form">
             <input type="text" placeholder="Enter option one text here" name="optionOne" onChange={this.handleChange} value={optionOne}/>

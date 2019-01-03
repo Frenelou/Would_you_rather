@@ -1,8 +1,9 @@
+// Avatars from https://www.iconfinder.com/icons/2754580/avatar_business_face_people_icon
 let users = {
   sarahedo: {
     id: 'sarahedo',
     name: 'Sarah Edo',
-    avatarURL: "http://lorempixel.com/output/people-q-g-200-200-6.jpg",
+    avatarURL: "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/4_avatar-512.png",
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionTwo',
@@ -14,7 +15,7 @@ let users = {
   tylermcginnis: {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    avatarURL: "http://lorempixel.com/output/people-q-g-200-200-6.jpg",
+    avatarURL: "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/10_avatar-512.png",
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +25,7 @@ let users = {
   johndoe: {
     id: 'johndoe',
     name: 'John Doe',
-    avatarURL: "http://lorempixel.com/output/people-q-g-200-200-6.jpg",
+    avatarURL: "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/1_avatar-512.png",
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
