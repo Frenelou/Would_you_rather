@@ -365,11 +365,12 @@ button {
     background-color: #fff;
     padding: 1rem 3rem;
     background-color: #e6e6e6; }
-    .button.toggle-button.selected,
-    button.toggle-button.selected {
-      background-color: #3197e0;
-      border-color: #3197e0;
-      color: #fff; }
+  .button.toggle-button.selected, .button:not(.toggle-button):hover,
+  button.toggle-button.selected,
+  button:not(.toggle-button):hover {
+    background-color: #3197e0;
+    border-color: #3197e0;
+    color: #fff; }
   .button:not(disabled),
   button:not(disabled) {
     cursor: pointer; }
@@ -535,7 +536,8 @@ nav {
     position: relative;
     max-width: 600px;
     margin: auto;
-    border: 1px solid silver; }
+    border: 1px solid silver;
+    margin: 3rem auto; }
   .question-list {
     width: 90%;
     margin: 0 auto;

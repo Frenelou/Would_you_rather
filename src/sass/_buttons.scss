@@ -24,12 +24,13 @@ button {
     background-color: #fff;
     padding: 1rem 3rem;
     background-color: $color-headers;
+  }
 
-    &.selected {
-      background-color: $color-primary;
-      border-color: $color-primary;
-      color: #fff;
-    }
+  &.toggle-button.selected,
+  &:not(.toggle-button):hover {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: #fff;
   }
 
   &:not(disabled) {

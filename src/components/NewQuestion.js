@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component, Fragment} from 'react'
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom'
 import {handleAddQuestion} from '../actions/questions'
@@ -36,20 +36,22 @@ class NewQuestion extends Component {
     if (toHome === true) {
       return <Redirect to='/'/>
     } else {
-      return (<div className="new-question ">
-          <h2 className="new-question--header">Create new question</h2>
-        <div className="new-question--body">
-          <label>Complete the question</label>
-          <h2>Would you rather...</h2>
-          <form action="" className="new-question--form">
-            <input type="text" placeholder="Enter option one text here" name="optionOne" onChange={this.handleChange} value={optionOne}/>
-            <label>OR</label>
-            <input type="text" placeholder="Enter option two text here" name="optionTwo" onChange={this.handleChange} value={optionTwo}/><br/>
-            <button disabled={optionOne.length === 0 && optionTwo.length === 0} type="Submit" onClick={this.handleSubmit}>Submit</button>
+      return (<Fragment>
+        <h1>Create new question</h1>
+        <div className="new-question ">
+          <div className="new-question--body">
+            <label>Complete the question</label>
+            <h2>Would you rather...</h2>
+            <form action="" className="new-question--form">
+              <input type="text" placeholder="Enter option one text here" name="optionOne" onChange={this.handleChange} value={optionOne}/>
+              <label>OR</label>
+              <input type="text" placeholder="Enter option two text here" name="optionTwo" onChange={this.handleChange} value={optionTwo}/><br/>
+              <button disabled={optionOne.length === 0 && optionTwo.length === 0} type="Submit" onClick={this.handleSubmit}>Submit</button>
 
-          </form>
+            </form>
+          </div>
         </div>
-      </div>)
+      </Fragment>)
     }
   }
 }
