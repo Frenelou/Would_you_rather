@@ -1,6 +1,9 @@
 # Would you rather
 
 A Udacity project.
+Available on [github](https://github.com/Frenelou/Would_you_rather)
+
+
 
 ## About this project
 
