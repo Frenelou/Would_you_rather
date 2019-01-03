@@ -33,7 +33,7 @@ class QuestionDetails extends Component {
       const answer = question.optionOne.votes.includes(authedUser)
 
       return (<div className="question-details">
-        <h1>QuestionDetails</h1>
+        <h1>Question Details</h1>
         <div className="question">
           <h3 className="question-header">
             {users[author].name}
