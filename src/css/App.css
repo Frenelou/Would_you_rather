@@ -481,7 +481,10 @@ nav {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+  align-items: center;
   margin: 1rem 0; }
+  .leaderboard-box > hr {
+    visibility: hidden; }
 
 .leaderboard-score {
   width: 6rem;
@@ -529,7 +532,8 @@ nav {
 .question {
   display: block;
   border: 1px solid silver;
-  margin: 3rem 0; }
+  margin: 3rem 0;
+  align-items: center; }
   .question * {
     text-align: left; }
   .question-body {
@@ -557,7 +561,8 @@ nav {
     margin: 0 auto;
     background-color: #fff; }
   .question hr {
-    margin: 0; }
+    margin: 0;
+    height: 10rem; }
     .question hr + div {
       margin-left: 3rem; }
   .question-option {

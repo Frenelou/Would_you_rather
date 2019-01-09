@@ -16,7 +16,12 @@
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
+    align-items: center;
     margin: 1rem 0;
+
+    > hr {
+      visibility: hidden;
+    }
   }
 
   &-score {
@@ -26,17 +31,19 @@
     position: relative;
     display: -webkit-flex;
     display: -ms-flex;
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
     &-body {
       height: inherit;
       flex: 1;
       display: -webkit-flex;
       display: -ms-flex;
-      display: flex;flex-direction: column;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 30px
+      font-size: 30px;
     }
 
     &-body,
