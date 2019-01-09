@@ -34,7 +34,7 @@ class NewQuestion extends Component {
     const {optionOne, optionTwo, toHome} = this.state
 
     if (toHome === true) {
-      return <Redirect to='/'/>
+      return <Redirect to='/Would_you_rather'/>
     } else {
       return (<Fragment>
         <h1>Create new question</h1>

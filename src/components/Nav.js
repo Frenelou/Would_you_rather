@@ -20,17 +20,17 @@ class Nav extends Component {
           <span>Hello, {this.props.userName}!</span>
         </li>
         <li>
-          <NavLink to='/leaderboard' activeClassName='active'>
+          <NavLink to={process.env.PUBLIC_URL + '/leaderboard'}  activeClassName='active'>
             Leaderboard
           </NavLink>
         </li>
         <li>
-          <NavLink to='/new' activeClassName='active'>
+          <NavLink to={process.env.PUBLIC_URL + '/new'} activeClassName='active'>
             New Question
           </NavLink>
         </li>
         <li>
-          <NavLink to={process.env.PUBLIC_URL+ '/'} exact={true} activeClassName='active'>
+          <NavLink to='/Would_you_rather' exact={true} activeClassName='active'>
             Home
           </NavLink>
         </li>
