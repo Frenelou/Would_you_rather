@@ -7,7 +7,7 @@ class Nav extends Component {
   setUser = (e) => {
     e.preventDefault()
     this.props.dispatch(unsetAuthedUser())
-    this.props.history.push('/')
+    this.props.history.push(process.env.PUBLIC_URL+ '/')
 
   }
   render() {
@@ -30,7 +30,7 @@ class Nav extends Component {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/' exact={true} activeClassName='active'>
+          <NavLink to={process.env.PUBLIC_URL+ '/'} exact={true} activeClassName='active'>
             Home
           </NavLink>
         </li>
