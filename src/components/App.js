@@ -28,12 +28,11 @@ class App extends Component {
               : <Fragment>
                   <Nav/>
                   <Switch>
-                    <Route path='/Would_you_rather' exact={true} component={Homepage}/>
-                    <Route path='/' exact={true} component={Homepage}/>
-                    <Route path={process.env.PUBLIC_URL + '/leaderboard'} exact={true} component={Leaderboard}/>
-                    <Route path={process.env.PUBLIC_URL + '/question/:id'} component={QuestionDetails}/>
-                    <Route path={process.env.PUBLIC_URL + '/new'} component={NewQuestion}/>
-                    <Route path={process.env.PUBLIC_URL + '/leaderboard'} component={Leaderboard}/>
+                    <Route path={process.env.PUBLIC_URL + '/'} exact={true} component={Homepage}/>
+                    <Route path={process.env.PUBLIC_URL + 'leaderboard'} exact={true} component={Leaderboard}/>
+                    <Route path={process.env.PUBLIC_URL + 'question/:id'} component={QuestionDetails}/>
+                    <Route path={process.env.PUBLIC_URL + 'new'} component={NewQuestion}/>
+                    <Route path={process.env.PUBLIC_URL + 'leaderboard'} component={Leaderboard}/>
                     <Route component={NotFound}/>
                   </Switch>
                 </Fragment>
