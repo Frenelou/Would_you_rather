@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/Would_you_rather/static/js/runtime~main.82a32afb.js"
   },
   {
-    "revision": "5a3e326ae1191fa97095",
-    "url": "/Would_you_rather/static/js/main.5a3e326a.chunk.js"
+    "revision": "4cba853cc8681031cdee",
+    "url": "/Would_you_rather/static/js/main.4cba853c.chunk.js"
   },
   {
     "revision": "fde6134309a2f9e14649",
     "url": "/Would_you_rather/static/js/1.fde61343.chunk.js"
   },
   {
-    "revision": "5a3e326ae1191fa97095",
-    "url": "/Would_you_rather/static/css/main.745622fd.chunk.css"
+    "revision": "4cba853cc8681031cdee",
+    "url": "/Would_you_rather/static/css/main.b61793a8.chunk.css"
   },
   {
-    "revision": "f7bc143e4f2617a98c30ca0e15f4012d",
+    "revision": "737a9e33afc5859954554cfa9c079f8d",
     "url": "/Would_you_rather/index.html"
   }
 ];
