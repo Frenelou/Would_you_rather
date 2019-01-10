@@ -17,7 +17,8 @@ class App extends Component {
     this.props.dispatch(handleInitialData())
   }
   render() {
-    return (<Router>
+
+    return (<Router basename={'/Would_you_rather'}>
       <Fragment>
         <LoadingBar/>
 
@@ -32,7 +33,6 @@ class App extends Component {
                     <Route path='/leaderboard' exact={true} component={Leaderboard}/>
                     <Route path='/question/:id' component={QuestionDetails}/>
                     <Route path='/new' component={NewQuestion}/>
-                    <Route path='/leaderboard' component={Leaderboard}/>
                     <Route component={NotFound}/>
                   </Switch>
                 </Fragment>

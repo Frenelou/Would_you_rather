@@ -7,10 +7,13 @@ class Nav extends Component {
   setUser = (e) => {
     e.preventDefault()
     this.props.dispatch(unsetAuthedUser())
-    this.props.history.push(process.env.PUBLIC_URL+ '/')
+    this.props.history.push('/')
 
   }
   render() {
+
+    const baselink = process.env.PUBLIC_URL
+
     return (<nav>
       <ul id='nav'>
         <li className="logout">
@@ -20,17 +23,17 @@ class Nav extends Component {
           <span>Hello, {this.props.userName}!</span>
         </li>
         <li>
-          <NavLink to='/leaderboard' activeClassName='active'>
+          <NavLink to={`${baselink}/leaderboard`} activeClassName='active'>
             Leaderboard
           </NavLink>
         </li>
         <li>
-          <NavLink to='/new' activeClassName='active'>
+          <NavLink to={`${baselink}/new`} activeClassName='active'>
             New Question
           </NavLink>
         </li>
         <li>
-          <NavLink to={process.env.PUBLIC_URL+ '/'} exact={true} activeClassName='active'>
+          <NavLink to={`${baselink}/`} exact={true} activeClassName='active'>
             Home
           </NavLink>
         </li>
